@@ -3,9 +3,8 @@ require('dotenv').config(); // Carga las variables de entorno desde el archivo .
 const express = require('express'); // Framework para construir aplicaciones web y APIs
 const cors = require('cors'); // Middleware para permitir solicitudes de recursos cruzados
 const morgan = require('morgan'); // Middleware para el registro de solicitudes HTTP
-// const logger = require('./middleware/logger'); // Middleware personalizado para registrar solicitudes en Redis
-const { mongoose 
-    //, redisClient
+const logger = require('./middleware/logger'); // Middleware personalizado para registrar solicitudes en Redis
+const { mongoose, redisClient
  } = require('./config/db'); // Importamos las configuraciones de MongoDB y Redis
 
 // Importamos las rutas
@@ -27,7 +26,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 // Middleware personalizado para registrar solicitudes en Redis
-// app.use(logger);
+app.use(logger);
 
 // Usamos las rutas importadas
 app.use('/api/oficina', oficinaRoutes);
