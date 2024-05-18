@@ -38,15 +38,14 @@ module.exports = (req, res, next) => {
     } else {
       const key = `${req.method}:${Date.now()}:${req.originalUrl}`;
       const logEntry = JSON.stringify({
-        time: new Date(),
         req: {
+          time: new Date(),
           method: req.method,
           url: req.originalUrl,
           body: req.body,
         },
         res: {
-          statusCode: res.statusCode,
-          statusMessage: res.statusMessage,
+          method: res.method,
           body: body,
         },
       });
