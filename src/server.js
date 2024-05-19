@@ -10,8 +10,9 @@ const { mongoose, redisClient
 // Importamos las rutas
 const oficinaRoutes = require('./routes/oficina'); // Rutas relacionadas con la entidad oficina
 const clienteRoutes = require('./routes/cliente'); // Rutas relacionadas con la entidad cliente
-const envioRoutes = require('./routes/envio'); // Rutas relacionadas con la entidad cliente
-const tipoEnvioRoutes = require('./routes/tipo-envio'); // Rutas relacionadas con la entidad cliente
+const envioRoutes = require('./routes/envio'); // Rutas relacionadas con la entidad envio
+const tipoEnvioRoutes = require('./routes/tipo-envio'); // Rutas relacionadas con la entidad de tipo de envio
+const queryRoutes = require('./routes/query'); // Rutas relacionadas con la entidad cliente
 
 // Creamos una instancia de la aplicación Express
 const app = express();
@@ -33,6 +34,7 @@ app.use('/api/oficina', oficinaRoutes);
 app.use('/api/cliente', clienteRoutes);
 app.use('/api/envio', envioRoutes);
 app.use('/api/tipo-envio', tipoEnvioRoutes);
+app.use('/api/query', queryRoutes);
 
 // Definimos el puerto en el que la aplicación escuchará las solicitudes
 const PORT = process.env.PORT || 3000;
