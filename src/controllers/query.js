@@ -122,7 +122,7 @@ const Q4 = async (req, res) => {
         return res.status(404).json({ message: "No se encontraron envíos para el cliente especificado" });
       }
   
-      res.status(200).json(resultado[0]); // Enviar el primer (y único) documento en el resultado
+      res.status(200).json(clienteObj); // Enviar el primer (y único) documento en el resultado
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
@@ -130,148 +130,123 @@ const Q4 = async (req, res) => {
 
 
 // Q5. Listar los clientes que han realizado envíos en una determinada oficina.
-const Q5 = async (req, res) => {
+  const Q5 = async (req, res) => {
     try {
       // Buscar la oficina en la base de datos
-      const oficina = await Oficina.findOne({ ID: req.params.id}).select('ID NOMBRE DIRECCION TELEFONO EMAIL -_id');
-      // Buscar los clientes que están en el envio
-      const clientes = await Cliente.find({CURP: { $in : oficina.CLIENTE } }).select('CURP NOMBRE APELLIDOS EMAIL -_id');
-        
+      const oficina = await Oficina.findOne({ ID: req.params.id }).select('ID NOMBRE DIRECCION TELEFONO EMAIL CLIENTES -_id');
+  
+      // Buscar los clientes que han realizado envíos en la oficina
+      const clientes = await Cliente.find({ CURP: { $in: oficina.CLIENTES } }).select('CURP NOMBRE APELLIDOS EMAIL -_id');
+  
+      // Convertir la oficina en un objeto para poder modificarlo
       const oficinaObj = oficina.toObject();
       oficinaObj.CLIENTES = clientes;
   
-      if (oficina.length === 0) {
-        return res.status(404).json({ message: "No se encontró la oficina" });
-      }
-  
+      // Enviar la oficina con los clientes como respuesta
       res.status(200).json(oficinaObj);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
   };
 
-
 // Q6. Listar los envíos de todas las oficinas con estatus de entregado.
 const Q6 = async (req, res) => {
-    try {
-      // Buscar todos los envios con ese estatus
-      const envios = Envio.find( {ESTATUS: 'ENTREGADO'} ).select('-_id');
-      
-      const enviosArray = [];
+  try {
+    // Buscar todos los envíos con ese estatus
+    const envios = await Envio.find({ ESTATUS: 'ENTREGADO' }).select('-_id');
 
-      // Metodo para hacer el populate de forma manual
-      for (const envio of envios) {
-
-        // Buscar el cliente que están en el envio
-        const cliente = await Cliente.findOne({CURP: envio.CLIENTE }).select('CURP NOMBRE APELLIDOS EMAIL -_id');
-        // Buscar la oficina de origen que está en el envio
-        const origen = await Oficina.findOne({ ID: envio.ORIGEN }).select('NOMBRE DIRECCION TELEFONO EMAIL -_id');;
-        // Buscar las oficina de origen que está en el envio
-        const destino = await Oficina.findOne({ ID: envio.DESTINO }).select('NOMBRE DIRECCION TELEFONO EMAIL -_id');;
-        // Buscar el tipo de envio que está en cada envio
-        const tipo = await TipoEnvio.findOne({ ID: envio.TIPO_DE_ENVIO }).select('ID DESCRIPCION PRECIO_KM TIEMPO_ENTREGA -_id');
-        
-        //Se estructura un nuevo objeto para mandar los datos en orden
-        const envioObj = {
-          ID: envio.ID,
-          FECHA_DE_ENVIO: envio.FECHA_DE_ENVIO,
-          PESO: envio.PESO,
-          DIMENSIONES: envio.DIMENSIONES,
-          COSTO_TOTAL: envio.COSTO_TOTAL,
-          ESTATUS: envio.ESTATUS,
-          CLIENTE: cliente,
-          ORIGEN: origen,
-          DESTINO: destino,
-          TIPO_DE_ENVIO: tipo
-        }
-
-        enviosArray.push(envioObj);
-      }
-      if (!envios.length) {
-        return res.status(404).json({ message: "No se encontraron envíos para el tipo de envío especificado" });
-      }
-  
-
-      res.status(200).json(enviosArray);
-    } catch (error) {
-      res.status(500).json({ message: error.message });
+    // Verificar si se encontraron envíos
+    if (!envios || envios.length === 0) {
+      return res.status(404).json({ message: "No se encontraron envíos con el estatus especificado" });
     }
-  };
+
+    console.log("Tipo de envios:", typeof envios); // Agregado para depuración
+
+    const enviosArray = [];
+
+    // Método para hacer el populate de forma manual
+    for (const envio of envios) {
+      console.log("Envío:", envio); // Agregado para depuración
+      
+      // Buscar el cliente que está en el envío
+      const cliente = await Cliente.findOne({ CURP: envio.CLIENTE }).select('CURP NOMBRE APELLIDOS EMAIL -_id');
+      // Buscar la oficina de origen que está en el envío
+      const origen = await Oficina.findOne({ ID: envio.ORIGEN }).select('NOMBRE DIRECCION TELEFONO EMAIL -_id');
+      // Buscar la oficina de destino que está en el envío
+      const destino = await Oficina.findOne({ ID: envio.DESTINO }).select('NOMBRE DIRECCION TELEFONO EMAIL -_id');
+      // Buscar el tipo de envío que está en cada envío
+      const tipo = await TipoEnvio.findOne({ ID: envio.TIPO_DE_ENVIO }).select('ID DESCRIPCION PRECIO_KM TIEMPO_ENTREGA -_id');
+      
+      // Se estructura un nuevo objeto para mandar los datos en orden
+      const envioObj = {
+        ID: envio.ID,
+        FECHA_DE_ENVIO: envio.FECHA_DE_ENVIO,
+        PESO: envio.PESO,
+        DIMENSIONES: envio.DIMENSIONES,
+        COSTO_TOTAL: envio.COSTO_TOTAL,
+        ESTATUS: envio.ESTATUS,
+        CLIENTE: cliente,
+        ORIGEN: origen,
+        DESTINO: destino,
+        TIPO_DE_ENVIO: tipo
+      };
+
+      enviosArray.push(envioObj);
+    }
+
+    // Enviar la respuesta con los envíos encontrados
+    res.status(200).json(enviosArray);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 
 
 // Q7. Listar los clientes y sus envíos que se han remitido por el servicio terrestre considerando todas las oficinas.
 const Q7 = async (req, res) => {
-    try {
-      const envios = await TipoEnvio.find({})
+  try {
+    // Encontrar el tipo de envío correspondiente al servicio terrestre
+    const tipoEnvio = await TipoEnvio.find({ DESCRIPCION : 'TERRESTRE'}).select('-_id -createdAt -updatedAt -__v');
 
-      res.status(200).json();
-    } catch (error) {
-      res.status(500).json({ message: error.message });
+    const tipoEnvioArray = [];
+
+    // Cargar el arreglo de TipoEnvio con la información de cada Envio
+    for (const tipo of tipoEnvio){
+
+      // Buscar los envíos con los ID proporcionados en el tipo de envío
+      const envios = await Envio.find({ TIPO_DE_ENVIO : tipo.ID }).select('-_id -createdAt -updatedAt -__v');
+
+      // Para cada envío, buscar y agregar los datos del cliente
+      for (const envio of envios) {
+        const cliente = await Cliente.findOne({ CURP : envio.CLIENTE }).select('CURP NOMBRE APELLIDOS EMAIL -_id');
+        envio.CLIENTE = cliente;
+      }
+
+      // Agregar los envíos y su tipo al array
+      tipo.ENVIOS = envios;
+      tipoEnvioArray.push(tipo);
     }
-  };
-  
-// Q8. Listar los clientes y sus envíos que se han remitido por el servicio por el servicio express considerando una oficina
-// en específico.
-const Q8 = async (req, res) => {
-    const { oficinaId } = req.params;
-  
+
+    // Retornar los detalles de los envíos terrestres y sus clientes asociados
+    res.status(200).json(tipoEnvioArray);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+  // Q8. Listar los clientes y sus envíos que se han remitido por el servicio por el servicio express considerando una oficina
+  const Q8 = async (req, res) => {
     try {
-      const resultado = await Envio.aggregate([
-        {
-          $match: { "ORIGEN": oficinaId }
-        },
-        {
-          $lookup: {
-            from: 'TIPO',
-            localField: 'TIPO_DE_ENVIO',
-            foreignField: 'ID',
-            as: 'TIPO_DE_ENVIO'
-          }
-        },
-        {
-          $unwind: "$TIPO_DE_ENVIO"
-        },
-        {
-          $match: { "TIPO_DE_ENVIO.DESCRIPCION": "EXPRESS" }
-        },
-        {
-          $lookup: {
-            from: 'CLIENTE',
-            localField: 'CLIENTE',
-            foreignField: 'CURP',
-            as: 'CLIENTE'
-          }
-        },
-        {
-          $unwind: "$CLIENTE"
-        },
-        {
-          $group: {
-            _id: "$CLIENTE.CURP",
-            NOMBRE: { $first: "$CLIENTE.NOMBRE" },
-            APELLIDOS: { $first: "$CLIENTE.APELLIDOS" },
-            EMAIL: { $first: "$CLIENTE.EMAIL" },
-            ENVIOS: {
-              $push: {
-                ID_ENVIO: "$ID",
-                DESCRIPCION: "$TIPO_DE_ENVIO.DESCRIPCION",
-                FECHA_DE_ENVIO: "$FECHA_DE_ENVIO",
-                ORIGEN: "$ORIGEN",
-                DESTINO: "$DESTINO",
-                PESO: "$PESO",
-                COSTO_TOTAL: "$COSTO_TOTAL",
-                ESTATUS: "$ESTATUS"
-              }
-            }
-          }
-        }
-      ]);
-  
-      res.status(200).json(resultado);
+
+      
+
     } catch (error) {
-      res.status(500).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
-  };
+};
+
+
 
 // Exportamos las funciones del controlador
 module.exports = {
