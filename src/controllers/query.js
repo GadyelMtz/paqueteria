@@ -1,6 +1,7 @@
 // /src/controllers/query.js
 // Importar los modelos necesarios
 const Cliente = require("../models/cliente");
+const envio = require("../models/envio");
 const Envio = require("../models/envio");
 const Oficina = require("../models/oficina");
 const TipoEnvio = require("../models/tipo-envio");
@@ -235,18 +236,99 @@ const Q7 = async (req, res) => {
   }
 };
 
-  // Q8. Listar los clientes y sus envíos que se han remitido por el servicio por el servicio express considerando una oficina
-  const Q8 = async (req, res) => {
-    try {
 
-      
+// Q8. Listar los clientes y sus envíos que se han remitido por el servicio express considerando una oficina
+const Q8 = async (req, res) => {
+  try {
+    // Recuperamos la oficina
+    const oficina = await Oficina.findOne({ ID: req.params.id }).select('-_id -createdAt -updatedAt -__v -CLIENTES');
 
-    } catch (error) {
-        res.status(500).json({ message: error.message });
+    // Recuperamos los envios que son express
+    const tipoEnvio = await TipoEnvio.find({ DESCRIPCION : 'EXPRESS'}).select('-_id ID DESCRIPCION PRECIO_KM TIEMPO_ENTREGA');
+
+    // Almacenamos los ids que recuperamos 
+    const ids = tipoEnvio.map(tipo => tipo.ID);
+
+    // Filtramos los envíos que son express y están en la oficina
+    const enviosExpress = await Envio.find({ 
+      ID: { $in: oficina.ENVIOS }, 
+      TIPO_DE_ENVIO:  { $in : ids } 
+    }).select('-_id -createdAt -updatedAt -__v');
+
+
+    // Generamos un arreglo donde almacenar los envios
+    const enviosArray = [];
+
+    // Recorremos los envios
+    for (const envio of enviosExpress){
+      // Buscamos el cliente
+      const cliente = await Cliente.find({ CURP : envio.CLIENTE }).select('-_id -createdAt -updatedAt -__v -ENVIOS -OFICINAS');
+
+      // Buscamos el tipo 
+      const tipo = await TipoEnvio.find({ID : envio.TIPO_DE_ENVIO}).select('-_id -createdAt -updatedAt -__v -ENVIOS');
+      // Lo convertimos en objeto para modificarlo
+      const envioObj = envio.toObject();
+
+      // Asignamos los nuevos valores
+      envioObj.CLIENTE = cliente;
+      envioObj.TIPO_DE_ENVIO = tipo;
+
+      enviosArray.push(envioObj);
     }
+
+    // Convertimos la oficina a un objeto para modificarlo
+    const oficinaObj = oficina.toObject();
+
+    // Asignamos los envíos express filtrados a la propiedad ENVIOS
+    oficinaObj.ENVIOS = enviosArray;
+
+    // Retornamos los envíos express con sus clientes asociados
+    res.status(200).json(oficinaObj);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
 };
 
-
+/*
+{
+    "DIRECCION": {
+        "CALLE": "CALLE HIDALGO",
+        "NUMERO": "202",
+        "CIUDAD": "GUADALAJARA",
+        "CODIGO_POSTAL": "78901"
+    },
+    "ID": "O5",
+    "NOMBRE": "SUCURSAL OESTE",
+    "TELEFONO": "+52 33 6543 2109",
+    "EMAIL": "SUCURSALGDL@gmail.com",
+    "ENVIOS": [
+        {
+            "ID": "E22",
+            "FECHA_DE_ENVIO": "2024-04-28",
+            "PESO": "1.3 KG",
+            "DIMENSIONES": "17X17X17 CM",
+            "COSTO_TOTAL": "$130.00",
+            "ESTATUS": "PENDIENTE",
+            "CLIENTE": "JLCA960505HMNGRS22",
+            "ORIGEN": "O5",
+            "DESTINO": "O1",
+            "TIPO_DE_ENVIO": "TIPO6"
+        },
+        {
+            "ID": "E9",
+            "FECHA_DE_ENVIO": "2024-04-15",
+            "PESO": "3.2 KG",
+            "DIMENSIONES": "28X28X28 CM",
+            "COSTO_TOTAL": "$280.00",
+            "ESTATUS": "PENDIENTE",
+            "CLIENTE": "RCMM871121HDFXHJ09",
+            "ORIGEN": "O5",
+            "DESTINO": "O4",
+            "TIPO_DE_ENVIO": "TIPO9"
+        }
+    ]
+}
+ */
 
 // Exportamos las funciones del controlador
 module.exports = {

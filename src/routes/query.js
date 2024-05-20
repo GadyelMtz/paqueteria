@@ -24,6 +24,6 @@ router.get("/envios/entregados", Q6);
 router.get("/envios/terrestre", Q7);
 
 // Q8. Listar los clientes y sus envíos que se han remitido por el servicio express considerando una oficina en específico
-router.get("/oficinas/:oficinaId/envios/express", Q8);
+router.get("/oficinas/:id/envios/express", Q8);
 
 module.exports = router;
