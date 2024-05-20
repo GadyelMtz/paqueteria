@@ -1,0 +1,2764 @@
+{
+	"info": {
+		"_postman_id": "ba506bbe-a3ae-4c72-8d6f-d8798db59e30",
+		"name": "Entregable final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31312999"
+	},
+	"item": [
+		{
+			"name": "Escenario de datos",
+			"item": [
+				{
+					"name": "Clientes",
+					"item": [
+						{
+							"name": "Cliente 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"SABC560626MHGRLR01\",\r\n  \"NOMBRE\": \"CONCEPCIÓN\",\r\n  \"APELLIDOS\": \"SALGADO BRISEÑO\",\r\n  \"EMAIL\": \"clienteuno@gmail.com\",\r\n  \"OFICINAS\":[\"O1\"],\r\n  \"ENVIOS\":[\"E1\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"FESP970726HDFXYZ02\",\r\n  \"NOMBRE\": \"FERNANDA\",\r\n  \"APELLIDOS\": \"ESPINOZA SÁNCHEZ\",\r\n  \"EMAIL\": \"clientedos@outlook.com\",\r\n  \"OFICINAS\":[\"O1\"],\r\n  \"ENVIOS\":[\"E2\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"LMJR901010MHGNRS03\",\r\n  \"NOMBRE\": \"LUIS MANUEL\",\r\n  \"APELLIDOS\": \"JIMÉNEZ ROBLES\",\r\n  \"EMAIL\": \"clientetres@icloud.com\",\r\n  \"OFICINAS\":[\"O5\"],\r\n  \"ENVIOS\":[\"E3\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 4",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"GASM880805HJGMND04\",\r\n  \"NOMBRE\": \"GABRIELA\",\r\n  \"APELLIDOS\": \"SALAZAR MARTÍNEZ\",\r\n  \"EMAIL\": \"clientecuatro@gmail.com\",\r\n  \"OFICINAS\":[\"O2\",\"O3\"],\r\n  \"ENVIOS\":[\"E4\",\"E29\",\"E30\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"CSGM980410HDFQPL05\",\r\n  \"NOMBRE\": \"CARLOS\",\r\n  \"APELLIDOS\": \"SANTANA GARCÍA\",\r\n  \"EMAIL\": \"clientecinco@outlook.com\",\r\n  \"OFICINAS\":[\"O3\"],\r\n  \"ENVIOS\":[\"E5\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 6",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"MPFA900915HMNKRC06\",\r\n  \"NOMBRE\": \"MARÍA\",\r\n  \"APELLIDOS\": \"PÉREZ FLORES\",\r\n  \"EMAIL\": \"clienteseis@gmail.com\",\r\n  \"OFICINAS\":[\"O4\"],\r\n  \"ENVIOS\":[\"E6\",\"E28\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 7",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"GAMA840204HJGSTC07\",\r\n  \"NOMBRE\": \"GUSTAVO\",\r\n  \"APELLIDOS\": \"MARTÍNEZ GONZÁLEZ\",\r\n  \"EMAIL\": \"clientesiete@icloud.com\",\r\n  \"ENVIOS\":[\"E7\"],\r\n  \"OFICINAS\":[\"O1\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 8",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"LAJF960713HDFCNP08\",\r\n  \"NOMBRE\": \"LUISA\",\r\n  \"APELLIDOS\": \"ALVARADO JUÁREZ\",\r\n  \"EMAIL\": \"clienteocho@outlook.com\",\r\n  \"ENVIOS\":[\"E8\"],\r\n  \"OFICINAS\":[\"O3\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 9",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"RCMM871121HDFXHJ09\",\r\n  \"NOMBRE\": \"ROBERTO\",\r\n  \"APELLIDOS\": \"CERVANTES MÉNDEZ\",\r\n  \"EMAIL\": \"clientenueve@gmail.com\",\r\n  \"ENVIOS\":[\"E9\",\"E27\"],\r\n  \"OFICINAS\":[\"O5\",\"O1\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 10",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"MOMG940330HMNXBN10\",\r\n  \"NOMBRE\": \"MÓNICA\",\r\n  \"APELLIDOS\": \"ORTEGA MORALES\",\r\n  \"EMAIL\": \"clientediez@icloud.com\",\r\n  \"ENVIOS\":[\"E10\"],\r\n  \"OFICINAS\":[\"O6\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 11",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"SGLC881002HMNDLZ11\",\r\n  \"NOMBRE\": \"SERGIO\",\r\n  \"APELLIDOS\": \"GÓMEZ LÓPEZ\",\r\n  \"EMAIL\": \"clienteonce@gmail.com\",\r\n  \"ENVIOS\":[\"E11\"],\r\n  \"OFICINAS\":[\"03\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 12",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"DACJ950317HMNRXR12\",\r\n  \"NOMBRE\": \"DANIELA\",\r\n  \"APELLIDOS\": \"AGUILAR CRUZ\",\r\n  \"EMAIL\": \"clientedoce@outlook.com\",\r\n  \"ENVIOS\":[\"E12\"],\r\n  \"OFICINAS\":[\"O1\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 13",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"JLFR860220HMNRXX13\",\r\n  \"NOMBRE\": \"JUAN LUIS\",\r\n  \"APELLIDOS\": \"FLORES RAMÍREZ\",\r\n  \"EMAIL\": \"clientetrece@gmail.com\",\r\n  \"ENVIOS\":[\"E13\",\"E26\"],\r\n  \"OFICINAS\":[\"O6\",\"O4\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 14",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"LAGC931212HMNDSW14\",\r\n  \"NOMBRE\": \"LUCÍA\",\r\n  \"APELLIDOS\": \"ARELLANO GUTIÉRREZ\",\r\n  \"EMAIL\": \"clientecatorce@icloud.com\",\r\n  \"ENVIOS\":[\"E14\"],\r\n  \"OFICINAS\":[\"O5\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 15",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"RJMP970801HMNXLR15\",\r\n  \"NOMBRE\": \"ROSA\",\r\n  \"APELLIDOS\": \"JIMÉNEZ MORA\",\r\n  \"EMAIL\": \"clientequince@outlook.com\",\r\n  \"ENVIOS\":[\"E15\"],\r\n  \"OFICINAS\":[\"O4\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 16",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"GJDL901113HDFRSM16\",\r\n  \"NOMBRE\": \"GUSTAVO\",\r\n  \"APELLIDOS\": \"JUÁREZ DELGADO\",\r\n  \"EMAIL\": \"clientedieciseis@gmail.com\",\r\n  \"ENVIOS\":[\"E16\"],\r\n  \"OFICINAS\":[\"O3\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 17",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"CFGL850415HMNBGD17\",\r\n  \"NOMBRE\": \"CARLOS\",\r\n  \"APELLIDOS\": \"FLORES GARCÍA\",\r\n  \"EMAIL\": \"clientediecisiete@icloud.com\",\r\n  \"ENVIOS\":[\"E17\"],\r\n  \"OFICINAS\":[\"O2\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 18",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"MPCV920327HDFPST18\",\r\n  \"NOMBRE\": \"MARÍA\",\r\n  \"APELLIDOS\": \"PEREZ CASTILLO\",\r\n  \"EMAIL\": \"clientedieciocho@outlook.com\",\r\n  \"ENVIOS\":[\"E18\"],\r\n  \"OFICINAS\":[\"O1\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 19",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"JLPC921218HMNXMR19\",\r\n  \"NOMBRE\": \"JUAN LUIS\",\r\n  \"APELLIDOS\": \"PINEDA CRUZ\",\r\n  \"EMAIL\": \"clientediecinueve@gmail.com\",\r\n  \"OFICINAS\":[\"O4\"],\r\n  \"ENVIOS\":[\"E19\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 20",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"MTDC910509HDFRVR20\",\r\n  \"NOMBRE\": \"MARÍA TERESA\",\r\n  \"APELLIDOS\": \"DOMÍNGUEZ CASTRO\",\r\n  \"EMAIL\": \"clienteveinte@icloud.com\",\r\n  \"OFICINAS\":[\"O3\"],\r\n  \"ENVIOS\":[\"E20\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 21",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"ARLP880303HMNRFR21\",\r\n  \"NOMBRE\": \"ANA ROSA\",\r\n  \"APELLIDOS\": \"RAMÍREZ LÓPEZ\",\r\n  \"EMAIL\": \"clienteveintiuno@gmail.com\",\r\n  \"OFICINAS\":[\"O6\"],\r\n  \"ENVIOS\":[\"E21\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 22",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"JLCA960505HMNGRS22\",\r\n  \"NOMBRE\": \"JUAN LUIS\",\r\n  \"APELLIDOS\": \"CASTILLO ÁLVAREZ\",\r\n  \"EMAIL\": \"clienteveintidos@outlook.com\",\r\n  \"OFICINAS\":[\"O5\"],\r\n  \"ENVIOS\":[\"E22\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 23",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"RLGS950613HMNNSR23\",\r\n  \"NOMBRE\": \"ROBERTO\",\r\n  \"APELLIDOS\": \"LOZANO GÓMEZ\",\r\n  \"EMAIL\": \"clienteveintitres@gmail.com\",\r\n  \"OFICINAS\":[\"O3\"],\r\n  \"ENVIOS\":[\"E23\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 24",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"MGVC910617HMNXDS24\",\r\n  \"NOMBRE\": \"MÓNICA\",\r\n  \"APELLIDOS\": \"GONZÁLEZ VÁZQUEZ\",\r\n  \"EMAIL\": \"cli8enteveinticuatro@icloud.com\",\r\n  \"OFICINAS\":[\"O2\"],\r\n  \"ENVIOS\":[\"E24\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente 25",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"CURP\": \"SPTM900414HMNVPS25\",\r\n  \"NOMBRE\": \"SOFÍA\",\r\n  \"APELLIDOS\": \"PÉREZ TORRES\",\r\n  \"EMAIL\": \"clienteveinticinco@gmail.com\",\r\n  \"OFICINAS\":[\"O6\"],\r\n  \"ENVIOS\":[\"E25\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Oficinas",
+					"item": [
+						{
+							"name": "Oficina 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"_id\": \"111111111111111111111111\",\r\n  \"ID\":\"O1\",\r\n  \"NOMBRE\": \"OFICINA CENTRAL\",\r\n  \"DIRECCION\": {\r\n    \"CALLE\": \"AVENIDA REVOLUCIÓN\",\r\n    \"NUMERO\": \"123\",\r\n    \"CIUDAD\": \"CIUDAD DE MÉXICO\",\r\n    \"CODIGO_POSTAL\": \"12345\"\r\n  },\r\n  \"TELEFONO\": \"+52 55 1234 5678\",\r\n  \"EMAIL\": \"OFICINACENTRALRVLUCION@gmail.com\",\r\n  \"CLIENTES\":[\r\n\t  \"SABC560626MHGRLR01\",\r\n\t  \"GAMA840204HJGSTC07\",\r\n\t  \"DACJ950317HMNRXR12\",\r\n\t  \"MPCV920327HDFPST18\",\r\n\t  \"RCMM871121HDFXHJ09\"],\r\n  \"ENVIOS\":[\r\n\t  \"E1\",\r\n\t  \"E7\",\r\n\t  \"E12\",\r\n\t  \"E18\",\r\n\t  \"E27\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Oficina 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"_id\": \"222222222222222222222222\",\r\n  \"ID\":\"O2\",\r\n  \"NOMBRE\": \"SUCURSAL NORTE\",\r\n  \"DIRECCION\": {\r\n    \"CALLE\": \"CALLE REFORMA\",\r\n    \"NUMERO\": \"456\",\r\n    \"CIUDAD\": \"MONTERREY\",\r\n    \"CODIGO_POSTAL\": \"54321\"\r\n  },\r\n  \"TELEFONO\": \"+52 81 9876 5432\",\r\n  \"EMAIL\": \"SUCURSALNTEMTY@outlook.com\",\r\n  \"CLIENTES\":[\r\n\t  \"GASM880805HJGMND04\",\r\n\t  \"CFGL850415HMNBGD17\",\r\n\t  \"MGVC910617HMNXDS24\"],\r\n  \"ENVIOS\":[\r\n\t  \"E4\",\r\n\t  \"E17\",\r\n\t  \"E24\",\r\n\t  \"E30\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Oficina 3",
+							"request": {
+								"auth": {
+									"type": "inherit"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"_id\": \"333333333333333333333333\",\r\n  \"ID\":\"O3\",\r\n  \"NOMBRE\": \"SUCURSAL SUR\",\r\n  \"DIRECCION\": {\r\n    \"CALLE\": \"AVENIDA JUÁREZ\",\r\n    \"NUMERO\": \"789\",\r\n    \"CIUDAD\": \"GUADALAJARA\",\r\n    \"CODIGO_POSTAL\": \"67890\"\r\n  },\r\n  \"TELEFONO\": \"+52 33 8765 4321\",\r\n  \"EMAIL\": \"SUCURSALSURGDL@icloud.com\",\r\n  \"CLIENTES\":[\r\n\t  \"FESP970726HDFXYZ02\",\r\n\t  \"CSGM980410HDFQPL05\",\r\n\t  \"LAJF960713HDFCNP08\",\r\n\t  \"SGLC881002HMNDLZ11\",\r\n\t  \"GJDL901113HDFRSM16\",\r\n\t  \"JLPC921218HMNXMR19\",\r\n\t  \"RLGS950613HMNNSR23\",\r\n\t  \"GASM880805HJGMND04\"],\r\n  \"ENVIOS\":[\r\n\t  \"E2\",\r\n\t  \"E5\",\r\n\t  \"E8\",\r\n\t  \"E11\",\r\n\t  \"E16\",\r\n\t  \"E20\",\r\n\t  \"E1\",\r\n\t  \"E29\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Oficina 4",
+							"request": {
+								"auth": {
+									"type": "inherit"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"_id\": \"444444444444444444444444\",\r\n  \"ID\":\"O4\",\r\n  \"NOMBRE\": \"SUCURSAL ESTE\",\r\n  \"DIRECCION\": {\r\n    \"CALLE\": \"CALLE MORELOS\",\r\n    \"NUMERO\": \"101\",\r\n    \"CIUDAD\": \"PUEBLA\",\r\n    \"CODIGO_POSTAL\": \"45678\"\r\n  },\r\n  \"TELEFONO\": \"+52 222 7654 3210\",\r\n  \"EMAIL\": \"SUCURSALPUEBLA@outlook.com\",\r\n  \"CLIENTES\":[\r\n\t  \"MPFA900915HMNKRC06\",\r\n\t  \"RJMP970801HMNXLR15\",\r\n\t  \"MTDC910509HDFRVR20\",\r\n\t  \"JLFR860220HMNRXX13\"],\r\n  \"ENVIOS\":[\r\n\t  \"E6\",\r\n\t  \"E15\",\r\n\t  \"E19\",\r\n\t  \"E26\",\r\n\t  \"E28\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Oficina 5",
+							"request": {
+								"auth": {
+									"type": "inherit"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"_id\": \"555555555555555555555555\",\r\n  \"ID\":\"O5\",\r\n  \"NOMBRE\": \"SUCURSAL OESTE\",\r\n  \"DIRECCION\": {\r\n    \"CALLE\": \"CALLE HIDALGO\",\r\n    \"NUMERO\": \"202\",\r\n    \"CIUDAD\": \"GUADALAJARA\",\r\n    \"CODIGO_POSTAL\": \"78901\"\r\n  },\r\n  \"TELEFONO\": \"+52 33 6543 2109\",\r\n  \"EMAIL\": \"SUCURSALGDL@gmail.com\",\r\n  \"CLIENTES\":[\r\n\t  \"LMJR901010MHGNRS03\",\r\n\t  \"RCMM871121HDFXHJ09\",\r\n\t  \"LAGC931212HMNDSW14\",\r\n\t  \"JLCA960505HMNGRS22\"],\r\n  \"ENVIOS\":[\r\n\t  \"E3\",\r\n\t  \"E9\",\r\n\t  \"E14\",\r\n\t  \"E22\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Oficina 6",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"_id\": \"666666666666666666666666\",\r\n  \"ID\":\"O6\",\r\n  \"NOMBRE\": \"SUCURSAL CENTRAL\",\r\n  \"DIRECCION\": {\r\n    \"CALLE\": \"AVENIDA BENITO JUÁREZ\",\r\n    \"NUMERO\": \"303\",\r\n    \"CIUDAD\": \"TIJUANA\",\r\n    \"CODIGO_POSTAL\": \"23456\"\r\n  },\r\n  \"TELEFONO\": \"+52 664 5432 1098\",\r\n  \"EMAIL\": \"SUCURSALBJUARES@icloud.com\",\r\n  \"CLIENTES\":[\r\n\t  \"MOMG940330HMNXBN10\",\r\n\t  \"JLFR860220HMNRXX13\",\r\n\t  \"ARLP880303HMNRFR21\",\r\n\t  \"SPTM900414HMNVPS25\"],\r\n  \"ENVIOS\":[\r\n\t  \"E10\",\r\n\t  \"E13\",\r\n\t  \"E21\",\r\n\t  \"E25\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Envios",
+					"item": [
+						{
+							"name": "Envio 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E1\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-09\",\r\n  \"PESO\": \"2 KG\",\r\n  \"DIMENSIONES\": \"20X20X20 CM\",\r\n  \"COSTO_TOTAL\": \"$200.00\",\r\n  \"ESTATUS\": \"PENDIENTE\",\r\n  \"CLIENTE\": \"SABC560626MHGRLR01\",\r\n  \"ORIGEN\": \"O1\",\r\n  \"DESTINO\": \"O2\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E2\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-10\",\r\n  \"PESO\": \"5 KG\",\r\n  \"DIMENSIONES\": \"30X30X30 CM\",\r\n  \"COSTO_TOTAL\": \"$350.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\",\r\n  \"CLIENTE\": \"FESP970726HDFXYZ02\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O4\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E3\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-11\",\r\n  \"PESO\": \"3 KG\",\r\n  \"DIMENSIONES\": \"25X25X25 CM\",\r\n  \"COSTO_TOTAL\": \"$250.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\",\r\n  \"CLIENTE\": \"LMJR901010MHGNRS03\",\r\n  \"ORIGEN\": \"O5\",\r\n  \"DESTINO\": \"O6\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 4",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E4\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-10\",\r\n  \"CLIENTE\": \"GASM880805HJGMND04\",\r\n  \"ORIGEN\": \"O2\",\r\n  \"DESTINO\": \"O1\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO1\",\r\n  \"PESO\": \"5 KG\",\r\n  \"DIMENSIONES\": \"30X30X30 CM\",\r\n  \"COSTO_TOTAL\": \"$350.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E5\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-11\",\r\n  \"CLIENTE\": \"CSGM980410HDFQPL05\",\r\n  \"ORIGEN\": \"03\",\r\n  \"DESTINO\": \"05\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO2\",\r\n  \"PESO\": \"3 KG\",\r\n  \"DIMENSIONES\": \"25X25X25 CM\",\r\n  \"COSTO_TOTAL\": \"$250.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 6",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E6\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-12\",\r\n  \"CLIENTE\": \"MPFA900915HMNKRC06\",\r\n  \"ORIGEN\": \"O4\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO3\",\r\n  \"PESO\": \"4 KG\",\r\n  \"DIMENSIONES\": \"35X35X35 CM\",\r\n  \"COSTO_TOTAL\": \"$300.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 7",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E7\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-13\",\r\n  \"CLIENTE\": \"GAMA840204HJGSTC07\",\r\n  \"ORIGEN\": \"O1\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO3\",\r\n  \"PESO\": \"1 KG\",\r\n  \"DIMENSIONES\": \"15X15X15 CM\",\r\n  \"COSTO_TOTAL\": \"$150.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 8",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E8\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-14\",\r\n  \"CLIENTE\": \"LAJF960713HDFCNP08\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O6\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO4\",\r\n  \"PESO\": \"2.5 KG\",\r\n  \"DIMENSIONES\": \"22X22X22 CM\",\r\n  \"COSTO_TOTAL\": \"$275.00\",\r\n  \"ESTATUS\": \"ENTREGADO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 9",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E9\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-15\",\r\n  \"CLIENTE\": \"RCMM871121HDFXHJ09\",\r\n  \"ORIGEN\": \"O5\",\r\n  \"DESTINO\": \"O4\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO9\",\r\n  \"PESO\": \"3.2 KG\",\r\n  \"DIMENSIONES\": \"28X28X28 CM\",\r\n  \"COSTO_TOTAL\": \"$280.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 10",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E10\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-16\",\r\n  \"CLIENTE\": \"MOMG940330HMNXBN10\",\r\n  \"ORIGEN\": \"O6\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO1\",\r\n  \"PESO\": \"4.8 KG\",\r\n  \"DIMENSIONES\": \"32X32X32 CM\",\r\n  \"COSTO_TOTAL\": \"$420.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 11",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E11\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-17\",\r\n  \"CLIENTE\": \"SGLC881002HMNDLZ11\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O2\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO2\",\r\n  \"PESO\": \"1.8 KG\",\r\n  \"DIMENSIONES\": \"18X18X18 CM\",\r\n  \"COSTO_TOTAL\": \"$200.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 12",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E12\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-18\",\r\n  \"CLIENTE\": \"DACJ950317HMNRXR12\",\r\n  \"ORIGEN\": \"O1\",\r\n  \"DESTINO\": \"O6\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO5\",\r\n  \"PESO\": \"3.5 KG\",\r\n  \"DIMENSIONES\": \"30X30X25 CM\",\r\n  \"COSTO_TOTAL\": \"$300.00\",\r\n  \"ESTATUS\": \"ENTREGADO\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 13",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E13\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-19\",\r\n  \"CLIENTE\": \"JLFR860220HMNRXX13\",\r\n  \"ORIGEN\": \"O6\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO8\",\r\n  \"PESO\": \"2.2 KG\",\r\n  \"DIMENSIONES\": \"22X22X20 CM\",\r\n  \"COSTO_TOTAL\": \"$220.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 14",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E14\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-20\",\r\n  \"CLIENTE\": \"LAGC931212HMNDSW14\",\r\n  \"ORIGEN\": \"O5\",\r\n  \"DESTINO\": \"O1\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO7\",\r\n  \"PESO\": \"1.5 KG\",\r\n  \"DIMENSIONES\": \"15X15X15 CM\",\r\n  \"COSTO_TOTAL\": \"$180.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 15",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E15\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-21\",\r\n  \"CLIENTE\": \"RJMP970801HMNXLR15\",\r\n  \"ORIGEN\": \"O4\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO7\",\r\n  \"PESO\": \"2.7 KG\",\r\n  \"DIMENSIONES\": \"25X25X25 CM\",\r\n  \"COSTO_TOTAL\": \"$250.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 16",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E16\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-22\",\r\n  \"CLIENTE\": \"GJDL901113HDFRSM16\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O1\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO5\",\r\n  \"PESO\": \"3.8 KG\",\r\n  \"DIMENSIONES\": \"35X35X30 CM\",\r\n  \"COSTO_TOTAL\": \"$380.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 17",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\":\"E17\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-23\",\r\n  \"CLIENTE\": \"CFGL850415HMNBGD17\",\r\n  \"ORIGEN\": \"O2\",\r\n  \"DESTINO\": \"O5\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO3\",\r\n  \"PESO\": \"2.3 KG\",\r\n  \"DIMENSIONES\": \"23X23X23 CM\",\r\n  \"COSTO_TOTAL\": \"$230.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 18",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E18\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-24\",\r\n  \"CLIENTE\": \"MPCV920327HDFPST18\",\r\n  \"ORIGEN\": \"O1\",\r\n  \"DESTINO\": \"O6\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO7\",\r\n  \"PESO\": \"2.1 KG\",\r\n  \"DIMENSIONES\": \"21X21X21 CM\",\r\n  \"COSTO_TOTAL\": \"$210.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 19",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E19\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-25\",\r\n  \"CLIENTE\": \"MTDC910509HDFRVR20\",\r\n  \"ORIGEN\": \"O4\",\r\n  \"DESTINO\": \"O5\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO9\",\r\n  \"PESO\": \"4.5 KG\",\r\n  \"DIMENSIONES\": \"33X33X33 CM\",\r\n  \"COSTO_TOTAL\": \"$400.00\",\r\n  \"ESTATUS\": \"ENTREGADO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 20",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E20\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-26\",\r\n  \"CLIENTE\": \"JLPC921218HMNXMR19\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O4\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO2\",\r\n  \"PESO\": \"2.9 KG\",\r\n  \"DIMENSIONES\": \"29X29X29 CM\",\r\n  \"COSTO_TOTAL\": \"$290.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 21",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E21\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-27\",\r\n  \"CLIENTE\": \"ARLP880303HMNRFR21\",\r\n  \"ORIGEN\": \"O6\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO4\",\r\n  \"PESO\": \"3.7 KG\",\r\n  \"DIMENSIONES\": \"31X31X31 CM\",\r\n  \"COSTO_TOTAL\": \"$320.00\",\r\n  \"ESTATUS\": \"ENTREGADO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 22",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E22\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-28\",\r\n  \"CLIENTE\": \"JLCA960505HMNGRS22\",\r\n  \"ORIGEN\": \"O5\",\r\n  \"DESTINO\": \"O1\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO6\",\r\n  \"PESO\": \"1.3 KG\",\r\n  \"DIMENSIONES\": \"17X17X17 CM\",\r\n  \"COSTO_TOTAL\": \"$130.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 23",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E23\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-29\",\r\n  \"CLIENTE\": \"RLGS950613HMNNSR23\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O2\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO8\",\r\n  \"PESO\": \"2.3 KG\",\r\n  \"DIMENSIONES\": \"23X23X23 CM\",\r\n  \"COSTO_TOTAL\": \"$220.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 24",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E24\",\r\n  \"FECHA_DE_ENVIO\": \"2024-04-30\",\r\n  \"CLIENTE\": \"MGVC910617HMNXDS24\",\r\n  \"ORIGEN\": \"O2\",\r\n  \"DESTINO\": \"O6\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO10\",\r\n  \"PESO\": \"4.2 KG\",\r\n  \"DIMENSIONES\": \"32X32X32 CM\",\r\n  \"COSTO_TOTAL\": \"$350.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 25",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E25\",\r\n  \"FECHA_DE_ENVIO\": \"2024-05-01\",\r\n  \"CLIENTE\": \"SPTM900414HMNVPS25\",\r\n  \"ORIGEN\": \"O6\",\r\n  \"DESTINO\": \"O4\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO1\",\r\n  \"PESO\": \"3.6 KG\",\r\n  \"DIMENSIONES\": \"30X30X30 CM\",\r\n  \"COSTO_TOTAL\": \"$380.00\",\r\n  \"ESTATUS\": \"ENTREGADO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 26",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E26\",\r\n  \"FECHA_DE_ENVIO\": \"2024-05-02\",\r\n  \"CLIENTE\": \"JLFR860220HMNRXX13\",\r\n  \"ORIGEN\": \"O4\",\r\n  \"DESTINO\": \"O3\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO3\",\r\n  \"PESO\": \"2.8 KG\",\r\n  \"DIMENSIONES\": \"28X28X28 CM\",\r\n  \"COSTO_TOTAL\": \"$260.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 27",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E27\",\r\n  \"FECHA_DE_ENVIO\": \"2024-05-03\",\r\n  \"CLIENTE\": \"RCMM871121HDFXHJ09\",\r\n  \"ORIGEN\": \"O1\",\r\n  \"DESTINO\": \"O2\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO7\",\r\n  \"PESO\": \"3.1 KG\",\r\n  \"DIMENSIONES\": \"29X29X29 CM\",\r\n  \"COSTO_TOTAL\": \"$270.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 28",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E28\",\r\n  \"FECHA_DE_ENVIO\": \"2024-05-04\",\r\n  \"CLIENTE\": \"MPFA900915HMNKRC06\",\r\n  \"ORIGEN\": \"O4\",\r\n  \"DESTINO\": \"O1\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO5\",\r\n  \"PESO\": \"4.9 KG\",\r\n  \"DIMENSIONES\": \"35X35X35 CM\",\r\n  \"COSTO_TOTAL\": \"$420.00\",\r\n  \"ESTATUS\": \"PENDIENTE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 29",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E29\",\r\n  \"FECHA_DE_ENVIO\": \"2024-05-05\",\r\n  \"CLIENTE\": \"GASM880805HJGMND04\",\r\n  \"ORIGEN\": \"O3\",\r\n  \"DESTINO\": \"O2\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO7\",\r\n  \"PESO\": \"1.7 KG\",\r\n  \"DIMENSIONES\": \"17X17X17 CM\",\r\n  \"COSTO_TOTAL\": \"$180.00\",\r\n  \"ESTATUS\": \"ENTREGADO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Envio 30",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"E30\",\r\n  \"FECHA_DE_ENVIO\": \"2024-05-06\",\r\n  \"CLIENTE\": \"GASM880805HJGMND04\",\r\n  \"ORIGEN\": \"O2\",\r\n  \"DESTINO\": \"O1\",\r\n  \"TIPO_DE_ENVIO\": \"TIPO10\",\r\n  \"PESO\": \"2.4 KG\",\r\n  \"DIMENSIONES\": \"24X24X24 CM\",\r\n  \"COSTO_TOTAL\": \"$240.00\",\r\n  \"ESTATUS\": \"TRÁNSITO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tipos de envio",
+					"item": [
+						{
+							"name": "Tipo 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO1\",\r\n  \"DESCRIPCION\": \"TERRESTRE\",\r\n  \"PRECIO_KM\": \"$1.50\",\r\n  \"TIEMPO_ENTREGA\": \"2 DÍAS\",\r\n  \"ENVIOS\":[\r\n\t\"E1\",\r\n\t\"E10\",\r\n\t\"E25\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO2\",\r\n  \"DESCRIPCION\": \"AEREO\",\r\n  \"PRECIO_KM\": \"$3.00\",\r\n  \"TIEMPO_ENTREGA\": \"1 DÍA\",\r\n  \"ENVIOS\":[\r\n\t\"E5\",\r\n\t\"E11\",\r\n\t\"E20\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO3\",\r\n  \"DESCRIPCION\": \"EXPRESS\",\r\n  \"PRECIO_KM\": \"$5.00\",\r\n  \"TIEMPO_ENTREGA\": \"4 HORAS\",\r\n  \"ENVIOS\":[\r\n\t\"E6\",\r\n\t\"E7\",\r\n\t\"E17\",\r\n\t\"E26\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 4",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO4\",\r\n  \"DESCRIPCION\": \"TERRESTRE\",\r\n  \"PRECIO_KM\": \"$1.00\",\r\n  \"TIEMPO_ENTREGA\": \"5 DÍAS\",\r\n  \"ENVIOS\":[\r\n\t\"E3\",\r\n\t\"E8\",\r\n\t\"E21\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO5\",\r\n  \"DESCRIPCION\": \"AEREO\",\r\n  \"PRECIO_KM\": \"$7.00\",\r\n  \"TIEMPO_ENTREGA\": \"1 HORA\",\r\n  \"ENVIOS\":[\r\n\t\"E2\",\r\n\t\"E12\",\r\n\t\"E16\",\r\n\t\"E28\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 6",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO6\",\r\n  \"DESCRIPCION\": \"EXPRESS\",\r\n  \"PRECIO_KM\": \"$10.00\",\r\n  \"TIEMPO_ENTREGA\": \"30 MINUTOS\",\r\n  \"ENVIOS\":[\r\n\t\"E22\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 7",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO7\",\r\n  \"DESCRIPCION\": \"TERRESTRE\",\r\n  \"PRECIO_KM\": \"$4.00\",\r\n  \"TIEMPO_ENTREGA\": \"3 DÍAS\",\r\n  \"ENVIOS\":[\r\n\t\"E14\",\r\n\t\"E15\",\r\n\t\"E18\",\r\n\t\"E27\",\r\n\t\"E29\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 8",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO8\",\r\n  \"DESCRIPCION\": \"AEREO\",\r\n  \"PRECIO_KM\": \"$0.75\",\r\n  \"TIEMPO_ENTREGA\": \"1 DÍA\",\r\n  \"ENVIOS\":[\r\n\t  \"E13\",\r\n\t  \"E23\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 9",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO9\",\r\n  \"DESCRIPCION\": \"EXPRESS\",\r\n  \"PRECIO_KM\": \"$2.50\",\r\n  \"TIEMPO_ENTREGA\": \"3 DÍAS\",\r\n  \"ENVIOS\":[\r\n\t  \"E9\",\r\n\t  \"E19\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tipo 10",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"ID\": \"TIPO10\",\r\n  \"DESCRIPCION\": \"TERRESTRE\",\r\n  \"PRECIO_KM\": \"$4.50\",\r\n  \"TIEMPO_ENTREGA\": \"12 HORAS\",\r\n  \"ENVIOS\":[\r\n\t  \"E1\",\r\n\t  \"E24\",\r\n\t  \"E30\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Querys",
+			"item": [
+				{
+					"name": "Q1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/oficinas/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"oficinas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/oficinas/O2/envios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"oficinas",
+								"O2",
+								"envios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/tipos-envio/TIPO10/envios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"tipos-envio",
+								"TIPO10",
+								"envios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/clientes/GASM880805HJGMND04/envios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"clientes",
+								"GASM880805HJGMND04",
+								"envios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/oficinas/O3/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"oficinas",
+								"O3",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q6",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/envios/entregados",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"envios",
+								"entregados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q7",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/envios/terrestre",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"envios",
+								"terrestre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Q8",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/query/oficinas/O1/envios/express",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"query",
+								"oficinas",
+								"O1",
+								"envios",
+								"express"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "Cliente",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"_id\": \"777777777777777777777777\",\n  \"ID\":\"O7\",\n  \"NOMBRE\": \"SUCURSAL NORTWEST\",\n  \"DIRECCION\": {\n    \"CALLE\": \"AVENIDA INSURGENTES\",\n    \"NUMERO\": \"400\",\n    \"CIUDAD\": \"TEPIC\",\n    \"CODIGO_POSTAL\": \"63000\"\n  },\n  \"TELEFONO\": \"+52 1324 43242 54343\",\n  \"EMAIL\": \"NORTHWEST@icloud.com\",\n  \"CLIENTES\":[\n\t  \"MAGG020623HNTRZDA9\"],\n  \"ENVIOS\":[\n\t  \"E31\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/cliente/MAGG020623HNTRZDA9",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										"MAGG020623HNTRZDA9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"CURP\": \"MAGG020623HNTRZDA9\",\n  \"NOMBRE\": \"GADYEL JOSUE\",\n  \"APELLIDOS\": \"MARTINEZ GUZMAN\",\n  \"EMAIL\": \"gadyelmtz@gmail.com\",\n  \"OFICINAS\":[\"O7\"],\n  \"ENVIOS\":[\"E31\"]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/cliente/MAGG020623HNTRZDA9",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										"MAGG020623HNTRZDA9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/cliente/MAGG020623HNTRZDA9",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										"MAGG020623HNTRZDA9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Oficina",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"_id\": \"777777777777777777777777\",\n  \"ID\":\"O7\",\n  \"NOMBRE\": \"SUCURSAL NORTWEST\",\n  \"DIRECCION\": {\n    \"CALLE\": \"AVENIDA INSURGENTES\",\n    \"NUMERO\": \"400\",\n    \"CIUDAD\": \"TEPIC\",\n    \"CODIGO_POSTAL\": \"63000\"\n  },\n  \"TELEFONO\": \"+52 1324 43242 54343\",\n  \"EMAIL\": \"NORTHWEST@icloud.com\",\n  \"CLIENTES\":[\n\t  \"MAGG020623HNTRZDA9\"],\n  \"ENVIOS\":[\n\t  \"E31\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/oficina/777777777777777777777777",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										"777777777777777777777777"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/oficina/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"_id\": \"777777777777777777777777\",\n  \"ID\":\"O7\",\n  \"NOMBRE\": \"SUCURSAL MODIFICADA\",\n  \"DIRECCION\": {\n    \"CALLE\": \"AVENIDA INSURGENTES\",\n    \"NUMERO\": \"400\",\n    \"CIUDAD\": \"TEPIC\",\n    \"CODIGO_POSTAL\": \"63000\"\n  },\n  \"TELEFONO\": \"+52 1324 43242 54343\",\n  \"EMAIL\": \"NORTHWEST@icloud.com\",\n  \"CLIENTES\":[\n\t  \"MAGG020623HNTRZDA9\"],\n  \"ENVIOS\":[\n\t  \"E31\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/oficina/O7",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										"O7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Envios",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"E31\",\n  \"FECHA_DE_ENVIO\": \"2024-05-21\",\n  \"PESO\": \"300 KG\",\n  \"DIMENSIONES\": \"25X25X25 CM\",\n  \"COSTO_TOTAL\": \"$250.00\",\n  \"ESTATUS\": \"TRÁNSITO\",\n  \"CLIENTE\": \"MAGG020623HNTRZDA9\",\n  \"ORIGEN\": \"O1\",\n  \"DESTINO\": \"O2\",\n  \"TIPO_DE_ENVIO\": \"TIPO4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/envio/E31",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										"E31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"E31\",\n  \"FECHA_DE_ENVIO\": \"2024-05-21\",\n  \"PESO\": \"30 KG\",\n  \"DIMENSIONES\": \"25X25X25 CM\",\n  \"COSTO_TOTAL\": \"$2500.00\",\n  \"ESTATUS\": \"TRÁNSITO\",\n  \"CLIENTE\": \"MAGG020623HNTRZDA9\",\n  \"ORIGEN\": \"O1\",\n  \"DESTINO\": \"O2\",\n  \"TIPO_DE_ENVIO\": \"TIPO4\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/envio/E31",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										"E31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/envio/E31",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"envio",
+										"E31"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tipos de envio",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"TIPO11\",\n  \"DESCRIPCION\": \"TERRESTRE\",\n  \"PRECIO_KM\": \"$10.50\",\n  \"TIEMPO_ENTREGA\": \"24 HORAS\",\n  \"ENVIOS\":[\n\t  \"E31\"]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read - ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/TIPO11",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										"TIPO11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"ID\": \"TIPO11\",\n  \"DESCRIPCION\": \"EXPRESS\",\n  \"PRECIO_KM\": \"$10.50\",\n  \"TIEMPO_ENTREGA\": \"26 HORAS\",\n  \"ENVIOS\":[\n\t  \"E31\"]\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/TIPO11",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										"TIPO11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/tipo-envio/TIPO11",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"tipo-envio",
+										"TIPO11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
