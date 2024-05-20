@@ -44,7 +44,7 @@ const obtenerEnvios = async (req, res) => {
 const obtenerEnvios = async (req, res) => {
   try {
     // Buscar todos los envios en la base de datos
-    const envios = await Envio.find();
+    const envios = await Envio.find().select('-_id');
     // Enviar la lista de Envios como respuesta
     res.status(200).json(envios);
   } catch (error) {
@@ -107,7 +107,7 @@ const obtenerEnvioPorId = async (req, res) => {
 const obtenerEnvioPorId = async (req, res) => {
   try {
     // Buscar un envio por su ID en la base de datos
-    const envio = await Envio.findOne({ ID: req.params.id});
+    const envio = await Envio.findOne({ ID: req.params.id}).select('-_id');
 
     if (envio == null) {
       // Si el envio no se encuentra, enviar un mensaje de error
@@ -135,7 +135,7 @@ const actualizarEnvio = async (req, res) => {
     );
     if (envioActualizado == null) {
       // Si el envio no se encuentra, enviar un mensaje de error
-      return res.status(404).json({ message: "No se encontró la oficina" });
+      return res.status(404).json({ message: "No se encontró el envio" });
     }
     // Enviar el envio actualizado como respuesta
     res.status(200).json(envioActualizado);

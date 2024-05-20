@@ -45,7 +45,7 @@ const obtenerOficinas = async (req, res) => {
 const obtenerTiposEnvio = async (req, res) => {
   try {
     // Buscar todos los tipos de envio en la base de datos
-    const tipos = await TipoEnvio.find();
+    const tipos = await TipoEnvio.find().select('-_id');
     // Enviar la lista de tipos de envios como respuesta
     res.status(200).json(tipos);
   } catch (error) {
@@ -103,7 +103,7 @@ const obtenerTipoPorId = async (req, res) => {
 const obtenerTipoEnvioPorId = async (req, res) => {
   try {
     // Buscar un tipo de envio por su ID en la base de datos
-    const tipo = await TipoEnvio.findOne({ ID: req.params.id});
+    const tipo = await TipoEnvio.findOne({ ID: req.params.id}).select('-_id');
 
     if (tipo == null) {
       // Si el tipo de envio no se encuentra, enviar un mensaje de error
@@ -121,8 +121,8 @@ const actualizarTipoEnvio = async (req, res) => {
   try {
     // Buscar y actualizar una tipo de envio por su ID
     // El argumento { new: true } indica que se debe retornar el documento actualizado
-    const tipoActualizado = await TipoEnvio.findByIdAndUpdate(
-      req.params.id,
+    const tipoActualizado = await TipoEnvio.findOneAndUpdate(
+      { ID: req.params.id },
       req.body,
       {
         new: true,
@@ -143,8 +143,8 @@ const actualizarTipoEnvio = async (req, res) => {
 const eliminarTipoEnvio = async (req, res) => {
   try {
     // Buscar y eliminar un tipo de envio por su ID
-    const oficina = await Oficina.findByIdAndDelete(req.params.id);
-    if (oficina == null) {
+    const tipo = await TipoEnvio.findOneAndDelete({ ID: req.params.id });
+    if (tipo == null) {
       // Si el tipo de envio no se encuentra, enviar un mensaje de error
       return res.status(404).json({ message: "No se encontró el tipo de envio" });
     }

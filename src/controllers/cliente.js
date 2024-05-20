@@ -40,7 +40,7 @@ const obtenerClientes = async (req, res) => {
 const obtenerClientes = async (req, res) => {
   try {
     // Buscar todos los clientes en la base de datos
-    const clientes = await Cliente.find();
+    const clientes = await Cliente.find().select('-_id');
     // Enviar la lista de clientes como respuesta
     res.status(200).json(clientes);
   } catch (error) {
@@ -100,7 +100,7 @@ const obtenerClientePorId = async (req, res) => {
 const obtenerClientePorId = async (req, res) => {
   try {
     // Buscar un cliente por su CURP en la base de datos
-    const cliente = await Cliente.findOne({ CURP: req.params.id});
+    const cliente = await Cliente.findOne({ CURP: req.params.id}).select('-_id');
 
     if (cliente == null) {
       // Si el cliente no se encuentra, enviar un mensaje de error
@@ -128,7 +128,7 @@ const actualizarCliente = async (req, res) => {
     );
     if (clienteActualizado == null) {
       // Si el cliente no se encuentra, enviar un mensaje de error
-      return res.status(404).json({ message: "No se encontró la oficina" });
+      return res.status(404).json({ message: "No se encontró el cliente" });
     }
     // Enviar la oficina actualizada como respuesta
     res.status(200).json(clienteActualizado);

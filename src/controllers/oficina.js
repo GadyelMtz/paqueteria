@@ -45,7 +45,7 @@ const obtenerOficinas = async (req, res) => {
 const obtenerOficinas = async (req, res) => {
   try {
     // Buscar todas las oficinas en la base de datos
-    const oficinas = await Oficina.find();
+    const oficinas = await Oficina.find().select('-_id');
     // Enviar la lista de clientes como respuesta
     res.status(200).json(oficinas);
   } catch (error) {
@@ -72,7 +72,7 @@ const crearOficina = async (req, res) => {
 const obtenerOficinaPorId = async (req, res) => {
   try {
     // Buscar una oficina por su ID en la base de datos
-    const oficina = await Oficina.findById(req.params.id);
+    const oficina = await Oficina.findOne({ ID: req.params.id }).select('-_id');
 
     if (oficina == null) {
       // Si la oficina no se encuentra, enviar un mensaje de error
@@ -103,8 +103,8 @@ const actualizarOficina = async (req, res) => {
   try {
     // Buscar y actualizar una oficina por su ID
     // El argumento { new: true } indica que se debe retornar el documento actualizado
-    const oficinaActualizada = await Oficina.findByIdAndUpdate(
-      req.params.id,
+    const oficinaActualizada = await Oficina.findOneAndUpdate(
+      { ID: req.params.id },
       req.body,
       {
         new: true,
@@ -125,7 +125,7 @@ const actualizarOficina = async (req, res) => {
 const eliminarOficina = async (req, res) => {
   try {
     // Buscar y eliminar una oficina por su ID
-    const oficina = await Oficina.findByIdAndDelete(req.params.id);
+    const oficina = await Oficina.findOneAndDelete({ ID: req.params.id });
     if (oficina == null) {
       // Si la oficina no se encuentra, enviar un mensaje de error
       return res.status(404).json({ message: "No se encontró la oficina" });
