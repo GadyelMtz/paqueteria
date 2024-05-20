@@ -218,16 +218,31 @@ const Q7 = async (req, res) => {
       // Buscar los envíos con los ID proporcionados en el tipo de envío
       const envios = await Envio.find({ TIPO_DE_ENVIO : tipo.ID }).select('-_id -createdAt -updatedAt -__v');
 
+      const arrayEnvios = [];
       // Para cada envío, buscar y agregar los datos del cliente
       for (const envio of envios) {
         const cliente = await Cliente.findOne({ CURP : envio.CLIENTE }).select('CURP NOMBRE APELLIDOS EMAIL -_id');
-        envio.CLIENTE = cliente;
+        
+        const objEnvio = envio.toObject();
+        
+        objEnvio.CLIENTE = cliente;
+
+        arrayEnvios.push(objEnvio);
       }
 
-      // Agregar los envíos y su tipo al array
-      tipo.ENVIOS = envios;
-      tipoEnvioArray.push(tipo);
+      // Crear un nuevo objeto que contenga el tipo de envío y sus envíos correspondientes
+      const tipoConEnvios = {
+        ID: tipo.ID,
+        DESCRIPCION: tipo.DESCRIPCION,
+        PRECIO_KM: tipo.PRECIO_KM,
+        TIEMPO_ENTREGA: tipo.TIEMPO_ENTREGA,
+        ENVIOS: arrayEnvios
+      };
+
+      // Agregar el objeto al arreglo
+      tipoEnvioArray.push(tipoConEnvios);
     }
+
 
     // Retornar los detalles de los envíos terrestres y sus clientes asociados
     res.status(200).json(tipoEnvioArray);
