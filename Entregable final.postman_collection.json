@@ -2291,7 +2291,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"_id\": \"777777777777777777777777\",\n  \"ID\":\"O7\",\n  \"NOMBRE\": \"SUCURSAL NORTWEST\",\n  \"DIRECCION\": {\n    \"CALLE\": \"AVENIDA INSURGENTES\",\n    \"NUMERO\": \"400\",\n    \"CIUDAD\": \"TEPIC\",\n    \"CODIGO_POSTAL\": \"63000\"\n  },\n  \"TELEFONO\": \"+52 1324 43242 54343\",\n  \"EMAIL\": \"NORTHWEST@icloud.com\",\n  \"CLIENTES\":[\n\t  \"MAGG020623HNTRZDA9\"],\n  \"ENVIOS\":[\n\t  \"E31\"]\n}",
+									"raw": "{\n  \"CURP\": \"MAGG020623HNTRZDA9\",\n  \"NOMBRE\": \"GADYEL JOSUE\",\n  \"APELLIDOS\": \"MARTINEZ GUZMAN\",\n  \"EMAIL\": \"gadyelmtz@gmail.com\",\n  \"OFICINAS\":[\"O7\"],\n  \"ENVIOS\":[\"E31\"]\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2339,7 +2339,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": ""
+									"raw": "localhost:3000/api/cliente/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"cliente",
+										""
+									]
 								}
 							},
 							"response": []
@@ -2351,7 +2360,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"CURP\": \"MAGG020623HNTRZDA9\",\n  \"NOMBRE\": \"GADYEL JOSUE\",\n  \"APELLIDOS\": \"MARTINEZ GUZMAN\",\n  \"EMAIL\": \"gadyelmtz@gmail.com\",\n  \"OFICINAS\":[\"O7\"],\n  \"ENVIOS\":[\"E31\"]\n}\n",
+									"raw": "{\n  \"CURP\": \"MAGG020623HNTRZDA9\",\n  \"NOMBRE\": \"GADYEL J\",\n  \"APELLIDOS\": \"MARTINEZ GUZMAN\",\n  \"EMAIL\": \"gadyelmtz@gmail.com\",\n  \"OFICINAS\":[\"O7\"],\n  \"ENVIOS\":[\"E31\"]\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2433,7 +2442,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:3000/api/oficina/777777777777777777777777",
+									"raw": "localhost:3000/api/oficina/O7",
 									"host": [
 										"localhost"
 									],
@@ -2441,7 +2450,7 @@
 									"path": [
 										"api",
 										"oficina",
-										"777777777777777777777777"
+										"O7"
 									]
 								}
 							},
@@ -2485,7 +2494,16 @@
 									}
 								},
 								"url": {
-									"raw": ""
+									"raw": "localhost:3000/api/oficina/O7",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"oficina",
+										"O7"
+									]
 								}
 							},
 							"response": []
